@@ -4,6 +4,7 @@ import tensorflow as tf
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
+st.balloons()
 
 @st.cache(allow_output_mutation=True)
 def load_model():
@@ -14,7 +15,7 @@ with st.spinner('Model is being loaded..'):
 
   st.title("Binary Classifier")
   st.markdown('The model will predict wheather the image contain a ship or a truck')
-  file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
+  file = st.file_uploader("Please upload an image of ship or truck", type=["jpg", "png"])
 
   st.set_option('deprecation.showfileUploaderEncoding', False)
 def import_and_predict(image_data, model):
